@@ -64,9 +64,9 @@ export function saveCourseAction(courseBeingAddedOrEdited) {
 
 
 
-export const getCourseResponse = courseFound => ({
+export const getCourseResponse = (courseFound, courseId) => ({
     type: ActionType.GET_COURSE_RESPONSE,
-    course: courseFound
+    course: courseFound.find(item => item.id === courseId)
 });
 
 
@@ -78,7 +78,7 @@ export function getCourseAction(courseId) {
 
         return CourseApi.getCourse(courseId)
             .then(course => {
-                dispatch(getCourseResponse(course));
+                dispatch(getCourseResponse(course, courseId));
             }).catch(error => {
                 throw error;
             });

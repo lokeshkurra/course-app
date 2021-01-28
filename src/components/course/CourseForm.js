@@ -15,6 +15,7 @@ export const CourseForm = ({ handleSubmit, pristine, reset, submitting, heading,
                 label="Title"
                 placeholder="Title of the course"
                 component={FieldInput}
+                
             />
 
             <Field
@@ -36,7 +37,7 @@ export const CourseForm = ({ handleSubmit, pristine, reset, submitting, heading,
                 type="text"
                 name="length"
                 label="Length"
-                placeholder="Lenght of course in minutes or hours"
+                placeholder="Length of course in minutes or hours"
                 component={FieldInput}
             />
 

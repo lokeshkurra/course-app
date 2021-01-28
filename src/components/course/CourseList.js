@@ -41,7 +41,7 @@ class CourseList extends React.Component {
 
         this.selectRowProp = {
             mode: 'radio',
-            bgColor: '#c1f291',
+            bgColor: '#c4e7f9',
             onSelect: props.handleRowSelect,
             clickToSelect: true, 
             hideSelectColumn: true            
